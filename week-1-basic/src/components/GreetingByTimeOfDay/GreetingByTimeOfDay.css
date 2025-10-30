@@ -1,0 +1,15 @@
+.GreetingByTimeOfDay {
+  background-color: rgb(42, 48, 48);
+  width: 100%;
+  padding: 1rem;
+  color: white;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.greetingTitle {
+  font-size: 3rem;
+}
