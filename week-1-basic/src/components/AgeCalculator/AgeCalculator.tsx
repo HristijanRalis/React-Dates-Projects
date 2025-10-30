@@ -2,6 +2,7 @@ import { useState } from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalculator, faRotateRight } from "@fortawesome/free-solid-svg-icons";
+import "./AgeCalculator.css";
 export const AgeCalculator = () => {
   const [birthDate, setBirthDate] = useState<string>("");
   const [currentDate, setCurrentDate] = useState<string>("");

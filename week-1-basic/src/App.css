@@ -12,72 +12,16 @@
 .App {
   width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(110, 185, 219);
-  padding: 1rem;
-}
-
-.AgeCalculator {
-  background-color: rgb(42, 48, 48);
-  border-radius: 25px;
-  padding: 1rem;
-}
-
-.TITLE {
-  color: white;
-}
-.ageDiv {
-  display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: start;
-  margin-block: 20px;
-}
-
-.ageLabel {
-  color: white;
-}
-
-.ageDiv input {
-  padding: 10px 20px;
-  border-radius: 15px;
-  border: none;
-  margin-top: 10px;
-}
-
-.ageBtn {
-  border: none;
-  width: 100%;
-  padding: 10px 20px;
-  border-radius: 25px;
+  align-items: center;
   background-color: rgb(110, 185, 219);
-  color: white;
-  font-weight: bold;
-  transition: 0.5s ease-in;
 }
 
-.ageBtn:hover {
-  transform: scale(1.05) rotateX(15deg) translateZ(20px);
-  box-shadow: rgba(110, 185, 219, 0.5) 3.95px 3.95px 2.6px;
-}
-.AgeOutput {
+.section {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px; /* space between items */
-  margin-top: 50px; /* push it below the buttons */
-}
-
-.AgeOutput > div {
-  flex: 1;
-}
-
-.AgeOutputSpan {
-  background-color: gray;
-  color: white;
-  width: 100%;
-  padding: 10px 20px;
-  border-radius: 10px;
-  display: block;
+  padding: 1rem;
+  flex-direction: column;
 }
