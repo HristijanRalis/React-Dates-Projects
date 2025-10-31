@@ -1,0 +1,23 @@
+.DaysUntilEvent {
+  width: 100%;
+  background-color: rgb(42, 48, 48);
+  padding: 1rem;
+  color: white;
+}
+
+.EventDate .eventInput {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.eventInput label {
+  font-size: 25px;
+}
+
+.EventPicker {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+}
