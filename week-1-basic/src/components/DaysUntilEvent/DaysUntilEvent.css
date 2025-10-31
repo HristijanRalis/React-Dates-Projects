@@ -3,6 +3,7 @@
   background-color: rgb(42, 48, 48);
   padding: 1rem;
   color: white;
+  border-radius: 25px;
 }
 
 .EventDate .eventInput {

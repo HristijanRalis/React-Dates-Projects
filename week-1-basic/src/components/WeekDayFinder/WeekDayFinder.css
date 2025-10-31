@@ -1,0 +1,13 @@
+.WeekdayFinder {
+  width: 100%;
+  background-color: rgb(42, 48, 48);
+  padding: 1rem;
+  color: white;
+  border-radius: 25px;
+}
+
+.dayPickerWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}

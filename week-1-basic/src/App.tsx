@@ -5,6 +5,7 @@ import { CurrentClock } from "./components/CurrentClock/CurrentClock";
 import { GreetingByTimeOfDay } from "./components/GreetingByTimeOfDay/GreetingByTimeOfDay";
 import { DaysUntilEvent } from "./components/DaysUntilEvent/DaysUntilEvent";
 import "react-datepicker/dist/react-datepicker.css";
+import { WeekDayFinder } from "./components/WeekDayFinder/WeekDayFinder";
 function App() {
   return (
     <div className="App">
@@ -36,7 +37,10 @@ function App() {
 
       {/* Weekday Finder */}
 
-      <div className="section"></div>
+      <div className="section">
+        <h1>Weekday Finder</h1>
+        <WeekDayFinder />
+      </div>
     </div>
   );
 }
