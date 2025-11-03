@@ -1,4 +1,5 @@
 import "./App.css";
+import { DateFormater } from "./components/DateFormater/DateFormater";
 
 function App() {
   return (
@@ -6,6 +7,7 @@ function App() {
       {/* Date Formater */}
       <div className="section">
         <h1>Date Formater</h1>
+        <DateFormater />
       </div>
       {/* Add/Subtract Days*/}
 
