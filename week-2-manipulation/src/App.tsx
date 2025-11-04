@@ -2,6 +2,7 @@ import "./App.css";
 import { DateFormater } from "./components/DateFormater/DateFormater";
 import NewYearCountdown from "./components/NewYearCountdown/NewYearCountdown";
 import { SimpleDateRangeViewer } from "./components/SimpleDateRangeViewer/SimpleDateRangeViewer";
+import { TimeDifferenceCalculator } from "./components/TimeDifferenceCalculator/TimeDifferenceCalculator";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
 
       <div className="section">
         <h1>Time Difference Calculator</h1>
+        <TimeDifferenceCalculator />
       </div>
       {/* Simple Date Range Viewer */}
 
