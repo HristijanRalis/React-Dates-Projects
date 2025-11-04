@@ -1,0 +1,47 @@
+.AddSubtractDays {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  background-color: rgb(42, 48, 48);
+  border-radius: 25px;
+  padding-block: 20px;
+}
+.DaysForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 20px;
+}
+
+.daysContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+}
+
+.daysContent:not(:last-child) {
+  margin-top: 20px;
+}
+
+.daysInput {
+  padding: 10px 20px;
+  width: 100%;
+  border: none;
+  border-radius: 25px;
+}
+
+.CalculationBtn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: aquamarine;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}

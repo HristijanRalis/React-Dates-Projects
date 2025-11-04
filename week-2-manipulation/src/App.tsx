@@ -1,4 +1,5 @@
 import "./App.css";
+import AddSubtractDays from "./components/AddSubtractDays/AddSubtractDays";
 import { DateFormater } from "./components/DateFormater/DateFormater";
 import NewYearCountdown from "./components/NewYearCountdown/NewYearCountdown";
 import { SimpleDateRangeViewer } from "./components/SimpleDateRangeViewer/SimpleDateRangeViewer";
@@ -23,6 +24,7 @@ function App() {
 
       <div className="section">
         <h1>Add/Subtract Days</h1>
+        <AddSubtractDays />
       </div>
       {/* Time Difference Calculator */}
 
