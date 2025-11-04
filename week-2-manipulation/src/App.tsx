@@ -1,5 +1,7 @@
 import "./App.css";
 import { DateFormater } from "./components/DateFormater/DateFormater";
+import NewYearCountdown from "./components/NewYearCountdown/NewYearCountdown";
+import { SimpleDateRangeViewer } from "./components/SimpleDateRangeViewer/SimpleDateRangeViewer";
 
 function App() {
   return (
@@ -8,6 +10,13 @@ function App() {
       <div className="section">
         <h1>Date Formater</h1>
         <DateFormater />
+      </div>
+
+      {/* NewYear countdown*/}
+
+      <div className="section">
+        <h1>NewYear countdow!</h1>
+        <NewYearCountdown />
       </div>
       {/* Add/Subtract Days*/}
 
@@ -23,6 +32,7 @@ function App() {
 
       <div className="section">
         <h1>Simple Date Range Viewer </h1>
+        <SimpleDateRangeViewer />
       </div>
     </div>
   );

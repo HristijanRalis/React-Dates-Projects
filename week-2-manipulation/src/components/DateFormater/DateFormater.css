@@ -6,6 +6,7 @@
   width: 70%;
   background-color: rgb(42, 48, 48);
   border-radius: 25px;
+  padding-block: 20px;
 }
 
 .pickDate {
