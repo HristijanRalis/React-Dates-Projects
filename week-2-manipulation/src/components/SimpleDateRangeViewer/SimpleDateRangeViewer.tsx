@@ -51,10 +51,15 @@ export const SimpleDateRangeViewer = () => {
       </form>
 
       <div className="totalDays">
-        {showResult && totalDays !== null && (
-          <h3 className="result">
-            Total Days: <span>{totalDays}</span>
-          </h3>
+        {!startDate || !endDate ? (
+          <p>Please select both start and end dates.</p>
+        ) : (
+          showResult &&
+          totalDays !== null && (
+            <h3 className="result">
+              Total Days: <span>{totalDays}</span>
+            </h3>
+          )
         )}
       </div>
     </div>
