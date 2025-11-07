@@ -11,6 +11,7 @@ function App() {
     <div className="App">
       {/* Stopwatch */}
       <div className="section">
+        <h1>Stopwatch</h1>
         <Stopwatch />
       </div>
 
