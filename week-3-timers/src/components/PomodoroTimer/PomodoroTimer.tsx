@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import "./PomodoroTimer.css";
 
 export const PomodoroTimer = () => {
-  const WORK_TIME = 25 * 60;
+  const WORK_TIME = 1 * 60;
   const BREAK_TIME = 5 * 60;
 
   const [time, setTime] = useState(WORK_TIME);
@@ -15,16 +15,25 @@ export const PomodoroTimer = () => {
   };
 
   const handleReset = () => {
+    setTime(isWork ? WORK_TIME : BREAK_TIME);
+    setIsWork(true);
     setIsRunning(false);
     clearInterval(intervalRef.current!);
-    setIsWork(true); // ✅ fix: go back to Work mode
-    setTime(WORK_TIME);
+  };
+
+  const formatTime = () => {
+    const minutes = Math.floor(time / 60);
+    const seconds = time % 60;
+    return `${minutes.toString().padStart(2, "0")} : ${seconds
+      .toString()
+      .padStart(2, "0")}`;
   };
 
   const playSound = () => {
     const sound = new Audio(
       "https://actions.google.com/sounds/v1/alarms/alarm_clock.ogg"
     );
+
     sound.play();
   };
 
@@ -36,12 +45,11 @@ export const PomodoroTimer = () => {
           if (prev <= 1) {
             clearInterval(intervalRef.current!);
             playSound();
-            setIsWork((prevWork) => {
-              const nextWork = !prevWork;
-              setTime(nextWork ? WORK_TIME : BREAK_TIME);
-              return nextWork;
-            });
-            return prev;
+            const nextWork = !isWork;
+            setIsWork(nextWork);
+            setIsRunning(false);
+            setTime(nextWork ? WORK_TIME : BREAK_TIME);
+            return nextWork ? WORK_TIME : BREAK_TIME;
           }
           return prev - 1;
         });
@@ -49,17 +57,7 @@ export const PomodoroTimer = () => {
     } else {
       clearInterval(intervalRef.current!);
     }
-
-    return () => clearInterval(intervalRef.current!);
   }, [isRunning, isWork]);
-
-  const formatTime = () => {
-    const minutes = Math.floor(time / 60);
-    const seconds = time % 60;
-    return `${minutes.toString().padStart(2, "0")} : ${seconds
-      .toString()
-      .padStart(2, "0")}`;
-  };
 
   return (
     <div className="PomodoroTimer">
