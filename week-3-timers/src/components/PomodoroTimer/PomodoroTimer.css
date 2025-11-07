@@ -1,0 +1,27 @@
+.PomodoroTimer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: aquamarine;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 25px;
+}
+
+.PomodoroBtns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.btnReset {
+  background-color: darkred;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 30px;
+}

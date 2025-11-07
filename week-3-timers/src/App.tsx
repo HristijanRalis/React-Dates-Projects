@@ -1,12 +1,9 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import { Stopwatch } from "./components/Stopwatch/Stopwatch";
+import { PomodoroTimer } from "./components/PomodoroTimer/PomodoroTimer";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <div className="App">
       {/* Stopwatch */}
@@ -16,7 +13,10 @@ function App() {
       </div>
 
       {/* Pomodoro Timer */}
-      <div className="section"></div>
+      <div className="section">
+        <h1>Pomodoro Time</h1>
+        <PomodoroTimer />
+      </div>
 
       {/* Event Countdown */}
       <div className="section"></div>
