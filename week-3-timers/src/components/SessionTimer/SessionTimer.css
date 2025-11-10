@@ -1,0 +1,35 @@
+.SessionTimer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: aquamarine;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 25px;
+}
+
+.sessionBtns {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 1rem;
+}
+
+.btnSession {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  background-color: inherit;
+  box-shadow: rgb(255, 255, 255) 0px 6px 12px -2px,
+    rgb(252, 251, 251) 0px 3px 7px -3px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  font-size: 30px;
+  color: white;
+}
+
+.btnSession:hover {
+  transform: scale(1.1);
+}

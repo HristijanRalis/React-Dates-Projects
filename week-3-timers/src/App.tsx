@@ -4,6 +4,7 @@ import { Stopwatch } from "./components/Stopwatch/Stopwatch";
 import { PomodoroTimer } from "./components/PomodoroTimer/PomodoroTimer";
 import { EventCountdown } from "./components/EventCountdown/EventCountdown";
 import { WorldClock } from "./components/WorldClock/WorldClock";
+import { SessionTimer } from "./components/SessionTimer/SessionTimer";
 
 function App() {
   return (
@@ -33,7 +34,10 @@ function App() {
       </div>
 
       {/* Session Timer */}
-      <div className="section"></div>
+      <div className="section">
+        <h1>Session Timer</h1>
+        <SessionTimer />
+      </div>
     </div>
   );
 }
