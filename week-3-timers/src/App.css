@@ -11,6 +11,10 @@ body {
   margin: 0;
 }
 
+.App {
+  height: auto;
+}
+
 .section {
   display: flex;
   flex-direction: column;

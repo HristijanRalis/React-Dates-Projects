@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import { Stopwatch } from "./components/Stopwatch/Stopwatch";
 import { PomodoroTimer } from "./components/PomodoroTimer/PomodoroTimer";
+import { EventCountdown } from "./components/EventCountdown/EventCountdown";
 
 function App() {
   return (
@@ -19,7 +20,10 @@ function App() {
       </div>
 
       {/* Event Countdown */}
-      <div className="section"></div>
+      <div className="section">
+        <h1>Event Countdown</h1>
+        <EventCountdown />
+      </div>
 
       {/* World Clock */}
       <div className="section"></div>
