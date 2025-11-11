@@ -1,0 +1,50 @@
+.birthdayForm {
+  background-color: aquamarine;
+  padding: 1rem;
+  border-radius: 25px;
+}
+
+.birthdayInput {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-bottom: 20px;
+}
+.birthdayInput label {
+  font-size: 25px;
+}
+.birthdayInput input {
+  width: 100%;
+  padding: 20px 20px;
+  border: none;
+  border-radius: 25px;
+}
+
+.birthdayBtn {
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 20px;
+  background-color: rgb(36, 36, 36);
+  color: white;
+  cursor: pointer;
+}
+
+.birthdayList {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+  list-style-type: none;
+  padding-left: 0;
+  text-align: start;
+}
+
+.birthdayItem {
+  background-color: aquamarine;
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: black;
+}
