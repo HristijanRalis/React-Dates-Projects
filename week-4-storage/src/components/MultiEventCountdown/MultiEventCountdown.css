@@ -1,0 +1,82 @@
+.MultiEventCountdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 25px;
+  background-color: white;
+}
+
+.eventForm {
+  padding: 1rem;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+  background-color: rgb(8, 32, 85);
+}
+
+.eventContent {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+}
+
+.eventContent input {
+  width: 100%;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  margin-top: 15px;
+}
+.eventList {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-left: 0;
+  list-style-type: none;
+}
+.eventItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  color: black;
+  flex: 1 1 calc(33.33% - 20px);
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  width: 150px;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+}
+.submitBtn {
+  width: 200px;
+  font-size: 25px;
+  background-color: rgb(69, 201, 69);
+}
+.editBtn {
+  background-color: black;
+}
+
+.deleteBtn {
+  background-color: rgb(221, 26, 42);
+}
+
+.expired {
+  color: red;
+  font-weight: bold;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
