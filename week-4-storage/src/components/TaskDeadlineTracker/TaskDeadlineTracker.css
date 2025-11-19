@@ -1,0 +1,157 @@
+.TaskDeadlineTracker {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.TaskForm {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 700px;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.TaskContent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.TaskContent input,
+.TextDescription {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 16px;
+}
+
+.TextDescription {
+  min-height: 60px;
+  resize: vertical;
+}
+
+.submitBtn {
+  padding: 10px 20px;
+  border-radius: 25px;
+  width: 100%;
+  background-color: #64d9ca;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+}
+
+.submitBtn:hover {
+  background-color: #3bc5b1;
+  transform: scale(1.05);
+}
+
+.tasksList {
+  align-items: center;
+  justify-content: start;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+  padding-left: 0;
+  width: 90%;
+}
+
+.taskItem {
+  flex: 0 1 calc(33.33% - 20px);
+  padding: 15px;
+  border-radius: 15px;
+  background-color: #f9f9f9;
+  color: #222;
+  box-shadow: rgba(182, 181, 181, 0.3) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.taskItem.active {
+  box-shadow: 0 5px 15px rgba(30, 224, 60, 0.3);
+}
+
+.taskItem.expired {
+  box-shadow: 0 5px 15px rgba(238, 1, 1, 0.3);
+}
+
+.taskDescription {
+  margin-top: 10px;
+}
+
+.taskDate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.countdown {
+  font-weight: bold;
+  color: #0077ff;
+}
+
+.expiredText {
+  color: #ff4b4b;
+  font-weight: bold;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: space-around;
+}
+
+.statusBtn {
+  background-color: #1899b9;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.statusBtn:hover {
+  background-color: #11738b;
+}
+
+.editBtn,
+.deleteBtn {
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.editBtn:hover {
+  background-color: #ccc;
+}
+
+.deleteBtn:hover {
+  background-color: #ffb3b3;
+}
+
+/* Responsive */
+@media screen and (max-width: 725px) {
+  .taskItem {
+    flex: 0 1 calc(50% - 20px);
+  }
+}
+
+@media screen and (max-width: 424px) {
+  .taskItem {
+    flex: 0 1 100%;
+  }
+}
