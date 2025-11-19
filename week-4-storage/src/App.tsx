@@ -4,6 +4,7 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import { BirthdayRemainder } from "./components/BirthdayRemainder/BirthdayRemainder";
 import { MultiEventCountdown } from "./components/MultiEventCountdown/MultiEventCountdown";
+import { TaskDeadlineTracker } from "./components/TaskDeadlineTracker/TaskDeadlineTracker";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -21,20 +22,23 @@ function App() {
         <h1>Multi-Event Countdown</h1>
         <MultiEventCountdown />
       </div>
-      {/* Daily Planner */}
+
+      {/* TaskDeadlineTracker */}
 
       <div className="sections">
-        <h1>Daily Planner</h1>
+        <h1> TaskDeadlineTracker </h1>
+        <TaskDeadlineTracker />
       </div>
+
       {/* QuoteOfTheDay */}
 
       <div className="sections">
         <h1>QuoteOfTheDay</h1>
       </div>
-      {/* TaskDeadlineTracker */}
+      {/* Daily Planner */}
 
       <div className="sections">
-        <h1> TaskDeadlineTracker </h1>
+        <h1>Daily Planner</h1>
       </div>
     </div>
   );

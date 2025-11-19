@@ -54,6 +54,9 @@ export const MultiEventCountdown = () => {
   };
 
   const handleDelete = (index: number) => {
+    const okey = window.confirm("Are you sure to delete this Event?");
+
+    if (!okey) return;
     const filtered = events.filter((_, i) => index !== i);
     saveEvents(filtered);
   };
