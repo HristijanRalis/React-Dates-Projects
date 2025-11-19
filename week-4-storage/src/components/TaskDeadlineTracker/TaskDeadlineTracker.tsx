@@ -17,6 +17,12 @@ export const TaskDeadlineTracker = () => {
   const [date, setDate] = useState("");
   const [editing, setEditing] = useState<number | null>(null);
   const [description, setDescription] = useState("");
+  const [timeleft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
 
   const [tick, setTick] = useState(0);
 
@@ -72,14 +78,19 @@ export const TaskDeadlineTracker = () => {
     saveTask(updated);
   };
 
-  const getDaysLeft = (taskDate: string) => {
+  const getTimeLeft = (taskDate: string) => {
     const now = new Date().getTime();
     const target = new Date(taskDate).getTime();
 
     const diff = target - now;
-    if (diff < 0) return 0;
+    if (diff < 0) return { days: 0, hours: 0, minutes: 0, seconds: 0 };
 
-    return Math.ceil(diff / (1000 * 60 * 60 * 24));
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    return { days, hours, minutes, seconds };
   };
 
   const sortedTasks = [...tasks].sort((a, b) => {
@@ -122,8 +133,8 @@ export const TaskDeadlineTracker = () => {
 
       <ul className="tasksList">
         {sortedTasks.map((task) => {
-          const daysLeft = getDaysLeft(task.date);
-          const isOverdue = daysLeft === 0 && new Date(task.date) < new Date();
+          const timeLeft = getTimeLeft(task.date);
+          const isOverdue = new Date(task.date).getTime() < Date.now();
           const index = tasks.indexOf(task); // original index
 
           return (
@@ -140,7 +151,10 @@ export const TaskDeadlineTracker = () => {
                 </div>
 
                 {!task.status && !isOverdue && (
-                  <p className="countdown">{daysLeft} days left</p>
+                  <p className="countdown">
+                    {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m{" "}
+                    {timeLeft.seconds}s
+                  </p>
                 )}
                 {isOverdue && <p className="expiredText">Expired</p>}
 
