@@ -5,6 +5,8 @@ import "./App.css";
 import { BirthdayRemainder } from "./components/BirthdayRemainder/BirthdayRemainder";
 import { MultiEventCountdown } from "./components/MultiEventCountdown/MultiEventCountdown";
 import { TaskDeadlineTracker } from "./components/TaskDeadlineTracker/TaskDeadlineTracker";
+import { QuoteOfTheDay } from "./components/QuoteOfTheDay/QuoteOfTheDay";
+import { DailyPlanner } from "./components/DailyPlanner/DailyPlanner";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -34,11 +36,13 @@ function App() {
 
       <div className="sections">
         <h1>QuoteOfTheDay</h1>
+        <QuoteOfTheDay />
       </div>
       {/* Daily Planner */}
 
       <div className="sections">
         <h1>Daily Planner</h1>
+        <DailyPlanner />
       </div>
     </div>
   );
